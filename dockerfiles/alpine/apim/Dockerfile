@@ -93,7 +93,7 @@ RUN \
     && echo ${MOTD} > "${ENV}"
 
 # copy init script to user home
-COPY --chown=wso2carbon:wso2 docker-entrypoint.sh ${USER_HOME}/
+COPY --chmod=wso2carbon:wso2 docker-entrypoint.sh ${USER_HOME}/
 # install required packages
 RUN \
     apk add --no-cache \
