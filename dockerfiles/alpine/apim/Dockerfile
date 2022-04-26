@@ -104,7 +104,7 @@ RUN \
 RUN \
     wget -O ${WSO2_SERVER}.zip "${WSO2_SERVER_DIST_URL}" \
     && unzip -d ${USER_HOME} ${WSO2_SERVER}.zip \
-    && chown wso2carbon:wso2 -R ${WSO2_SERVER_HOME} \
+    && chmod wso2carbon:wso2 -R ${WSO2_SERVER_HOME} \
     && mkdir ${USER_HOME}/wso2-tmp \
     && bash -c 'mkdir -p ${USER_HOME}/solr/{indexed-data,database}' \
     && chmod wso2carbon:wso2 -R ${USER_HOME}/solr \
