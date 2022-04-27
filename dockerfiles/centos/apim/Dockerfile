@@ -17,7 +17,7 @@
 # ------------------------------------------------------------------------
 
 # set base Docker image to CentOS Docker image
-FROM centos:7
+FROM quay.io/centos/centos:7
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
