@@ -129,7 +129,7 @@ ENV WORKING_DIRECTORY=${USER_HOME} \
 # expose ports
 EXPOSE 9763 9443 9999 11111 8280 8243 5672 9711 9611 9099
 #&& chmod -R 777 /home/wso2carbon/ \
-#RUN chown wso2carbon:wso2 -R /home/wso2carbon/
+RUN chown wso2carbon:wso2 -R /home/wso2carbon/
 RUN chown +x /home/wso2carbon/docker-entrypoint.sh
 # initiate container and start WSO2 Carbon server
 ENTRYPOINT ["/home/wso2carbon/docker-entrypoint.sh"]
