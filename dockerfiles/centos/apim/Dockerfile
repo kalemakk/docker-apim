@@ -113,7 +113,7 @@ RUN \
     && mkdir ${USER_HOME}/wso2-tmp \
     && bash -c 'mkdir -p ${USER_HOME}/solr/{indexed-data,database}' \
     && chown wso2carbon:wso2 -R ${USER_HOME}/solr \
-    && chmod -R 777 /home/wso2carbon/ \
+    #&& chmod -R 777 /home/wso2carbon/ \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/synapse-configs ${USER_HOME}/wso2-tmp \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/executionplans ${USER_HOME}/wso2-tmp \
     && rm -f ${WSO2_SERVER}.zip
