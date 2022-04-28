@@ -115,7 +115,6 @@ RUN \
     && chown wso2carbon:wso2 -R ${USER_HOME}/solr \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/synapse-configs ${USER_HOME}/wso2-tmp \
     && cp -r ${WSO2_SERVER_HOME}/repository/deployment/server/executionplans ${USER_HOME}/wso2-tmp \
-    && chmod -R 777 /home/wso2carbon \
     && rm -f ${WSO2_SERVER}.zip
 
 # set the user and work directory
@@ -128,7 +127,7 @@ ENV WORKING_DIRECTORY=${USER_HOME} \
 
 # expose ports
 EXPOSE 9763 9443 9999 11111 8280 8243 5672 9711 9611 9099
-RUN chmod -R 777 /home/wso2carbon
-RUN chmod +x /home/wso2carbon/
+#&& chmod -R 777 /home/wso2carbon/ \
+RUN chmod +x /home/wso2carbon/docker-entrypoint.sh
 # initiate container and start WSO2 Carbon server
 ENTRYPOINT ["/home/wso2carbon/docker-entrypoint.sh"]
